@@ -9,6 +9,12 @@ Examples:
 findMultiples(2, 6) // return [2, 4, 6] as 2, 4, and 6 are the multiples of 2 up to 6.
 */
 
-function findMultiples(base, limit) {}
+function findMultiples(base, limit) {
+  const multiples = [base];
+  for (let i = 2 * base; i <= limit; i += base) {
+    multiples.push(i);
+  }
+  return multiples;
+}
 
 module.exports = findMultiples;
